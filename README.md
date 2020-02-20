@@ -1,5 +1,9 @@
 # annotator
 
+- install all dependencies
+- npm run dev (running .ts files)
+- npm run build (build .js files in ES6)
+- npm start (running .js express server)
 - run the server and got to "http://localhost:8001/"
 - upload image
 - select interesting or uninteresting for the annotation you wanna create
