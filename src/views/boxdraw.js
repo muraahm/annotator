@@ -48,30 +48,12 @@ $(() => {
     let width = Math.abs(startX - endX);
     let height = Math.abs(startY - endY);
     context.clearRect(0, 0, context.width, context.height);
-    //or use fillRect if you use a bg color
 
-    // context.beginPath();
-    // context.rect(startX, startY, width, height);
-    // context.fillStyle = "yellow";
-    // context.canvas.addEventListener('click', function(e) {
-    //     let mouseX = e.clientX - context.canvas.offsetLeft
-    //     let mouseY = e.clientY - context.canvas.offsetTop
-
-    //     context.fillStyle = "orange"
-    //     context.globalAlpha = 0.2;
-    //     context.fillRect(mouseX, mouseY, 30,30)
-    // })
 
     context.fillRect(startX, startY, width, height);
-    context.fillStyle = "orange"
-
-
-
-
-    // context.globalAlpha = 1.0;
-    // context.lineWidth = 1;
-    // context.strokeStyle = 'black';
-    // context.stroke();
+    context.shadowBlur = 15;//  shadow Blur
+    context.fillStyle = "red";
+    context.globalCompositeOperation = "lighter";
 
     if (mouseIsDown === 0) {
       let upperLeft = { pointId: generateUID(), position: [startX, startY] }
@@ -109,9 +91,6 @@ $(() => {
       drawSquare();
     }
   }
-
-
-
 
   $('#JSONOutput').click(() => {
     let imageElement = document.getElementById('imgupload');

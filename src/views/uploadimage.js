@@ -3,6 +3,9 @@ $(() => {
     // canvas
     let canvas = document.getElementById('canvas');
     let context = canvas.getContext("2d");
+    //clear canvas before uploading new photo
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.globalAlpha = 0.9;
     // context.canvas.width = window.innerWidth;
     // context.canvas.height = window.innerHeight;
     let img = new Image();
