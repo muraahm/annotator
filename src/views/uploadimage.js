@@ -3,8 +3,8 @@ $(() => {
     // canvas
     let canvas = document.getElementById('canvas');
     let context = canvas.getContext("2d");
-    context.canvas.width = window.innerWidth;
-    context.canvas.height = window.innerHeight;
+    // context.canvas.width = window.innerWidth;
+    // context.canvas.height = window.innerHeight;
     let img = new Image();
     let files = e.target.files; // FileList object
     let file = files[0];
